@@ -200,11 +200,27 @@ body {
 }
 
 /* Main index.html */
+
+/* Benefits */
 .benefits {
   padding-bottom: 0;
 }
 .benefits-list {
   display: flex;
+}
+.benefits-item {
+  max-width: 270px;
+}
+.benefits-list .icons {
+  background: #f5f4fa;
+  height: 120px;
+  margin-bottom: 30px;
+}
+.benefits-icon {
+  display: block;
+}
+.benefits-item:not(:last-child) {
+  margin-right: 30px;
 }
 .subtitle-benefits {
   margin-bottom: 10px;
@@ -214,13 +230,6 @@ body {
   line-height: 1.14;
   text-transform: uppercase;
 }
-.benefits-item {
-  max-width: 270px;
-}
-.benefits-item:not(:last-child) {
-  margin-right: 30px;
-}
-
 .benefits-txt {
   line-height: 1.7;
   color: var(--secondary-text-color);
@@ -274,6 +283,12 @@ body {
   text-align: center;
 
   color: var(--secondary-text-color);
+}
+.team-icons-list {
+  display: flex;
+}
+.team-item-icons:not(:last child) {
+  margin-right: 10px;
 }
 
 /* Main portfolio.html */
