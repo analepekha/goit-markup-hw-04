@@ -91,6 +91,7 @@ body {
 .nav-header {
   margin-left: 93px;
 }
+
 .nav-list .nav-item:not(:last-child) {
   margin-right: 50px;
 }
@@ -122,13 +123,27 @@ body {
 .nav-list-contacts {
   display: flex;
   margin-left: auto;
+  align-items: center;
 }
 .nav-list-contacts .nav-item-contacts + .nav-item-contacts {
-  margin-left: 50px;
+  margin-left: 30px;
 }
-
+.nav-item-contacts {
+  display: flex;
+}
+.nav-icon-link {
+  display: flex;
+  align-items: center;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  color: var(--secondary-text-color);
+}
+.nav-icon-link + .nav-link-contacts {
+  margin-left: 10px;
+}
 .nav-link-contacts {
   display: flex;
+  align-items: center;
   padding-top: 32px;
   padding-bottom: 32px;
 
@@ -140,16 +155,33 @@ body {
 
   color: var(--secondary-text-color);
 }
-.nav-link-contacts:hover,
-.nav-link-contacts:focus {
+.nav-item-contacts:hover .nav-icon-link,
+.nav-item-contacts:focus .nav-icon-link {
   color: var(--accent-color);
+}
+.nav-item-contacts:hover .nav-link-contacts,
+.nav-item-contacts:focus .nav-link-contacts {
+  color: var(--accent-color);
+}
+.nav-icon {
+  fill: currentColor;
 }
 
 /* Hero */
 .hero-section {
   text-align: center;
-  background-color: var(--primary-dark-bg);
+  background-color: #c4c4c4;
   padding: 200px 0;
+}
+.hero-overlay {
+  background-image: linear-gradient(
+      to right,
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url(../images/hero.jpg);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
 }
 .hero-title {
   max-width: 696px;
@@ -212,9 +244,15 @@ body {
   max-width: 270px;
 }
 .benefits-list .icons {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
   background: #f5f4fa;
   height: 120px;
   margin-bottom: 30px;
+
+  border-radius: 4px;
 }
 .benefits-icon {
   display: block;
@@ -278,17 +316,51 @@ body {
   text-align: center;
 }
 .team-txt {
+  margin-bottom: 16px;
+
   font-size: 16px;
   line-height: 1.18;
   text-align: center;
 
   color: var(--secondary-text-color);
 }
-.team-icons-list {
+.solials-list {
   display: flex;
+  margin-left: 32px;
+  margin-right: 32px;
 }
-.team-item-icons:not(:last child) {
+
+.solials-list .solials-item:not(:last-child) {
   margin-right: 10px;
+}
+
+.solials-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  width: 44px;
+  height: 44px;
+
+  background-color: var(--primary-light-bg);
+  border-radius: 50%;
+}
+
+.solials-icons {
+  display: inline-block;
+  fill: #afb1b8;
+  width: 20px;
+  height: 20px;
+}
+
+.solials-link:hover .solials-icons,
+.solials-link:focus .solials-icons {
+  fill: #fff;
+}
+.solials-link:hover,
+.solials-link:focus {
+  background-color: var(--accent-color);
 }
 
 /* Main portfolio.html */
